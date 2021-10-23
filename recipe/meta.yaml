@@ -1,4 +1,4 @@
-{% set version = "5.1.0" %}
+{% set version = "5.1.1" %}
 
 package:
   name: miceforest
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/miceforest/miceforest-{{ version }}.tar.gz
-  sha256: c484b791518b45a918cf61fec100ce33c73974c7bb78acec6a31b29b9de4e234
+  sha256: b30be77473671a120cec3b7d6d63c1d6fe2e573398d8fcaeb6ad40223387eeb4
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -45,7 +45,7 @@ about:
   # LICENSE file has been included in future distributions to pypi.
   # Remove on second push.
   license_file: LICENSE
-  summary: 'Fast multiple imputation with random forests.'
+  summary: Fast multiple imputation with random forests.
   description: |
     Multiple Imputation iteratively 'fills in' missing values in a dataset
     by modeling each variable as a function of the other variables. The
